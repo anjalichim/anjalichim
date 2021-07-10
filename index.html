@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+    <title>agri info tech</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p{ 
+    font-size: 15px;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header{
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: #99ff99;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+    background-color: #99ff99;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #475569;
+}
+
+.nav-link:hover{
+    color: #482ff7;
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #482ff7;
+}
+.dropbtn {
+  background-color:#99ff99;
+  color: block;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: block;}
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        -webkit-transform: translateY(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+section{
+        font-family: 'ubuntu',sans-serif;
+        margin-top: 15px;
+        }
+        #facilities{
+            background:lightseagreen;
+            padding: 30px 0px;
+        }
+    .card-body{
+        box-shadow: 0 0 40px 7px rgba(0,0,0,0.1);   
+    }
+   .card-body p{
+    font-family: 'Inconsolata', monospace;
+   font-family: 'Raleway', sans-serif;
+   word-spacing: normal;
+   font-size: 15px;
+   }
+  .card{
+      margin: 20px 10px;
+  }
+  
+    </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+<!-- Navigation-->
+
+<nav class="navbar">
+<a href="#" class="nav-logo"><h1><b>AGRI INFO TECH</b></h1>
+<h6>Welcome to the world of <span class="w3-tag">agriculture</span></h6></a>
+<ul class="nav-menu">
+    <li class="nav-item">
+        <a href="index.html" class="nav-link">Home</a>
+    </li>
+    <li class="nav-item">
+        <div class="dropdown">
+  <button class="dropbtn">categories </button>
+  <div class="dropdown-content">
+    <a href="fruits.html" class="nav-link">Fruits</a>
+    <a href="Vegetables.html" class="nav-link">Vegetables</a>
+    <a href="green leaf.html" class="nav-link">Green leaf Vegetables</a>
+  </div>
+</div>
+    </li>
+    <!--<li class="nav-item">
+        <a href="#" class="nav-link">Orders</a>
+    </li>-->
+    <li class="nav-item">
+        <a href="registeration.html" class="nav-link">Register</a>
+    </li>
+    <li class="nav-item">
+        <a href="login.html" class="nav-link">Login</a>
+    </li>
+        <li class="nav-item">
+        <a href="Check box cart.html" class="nav-link">My Cart</a>
+    </li>
+    <li class="nav-item">
+        <a href="contact us.html" class="nav-link">Contact Us</a>
+    </li>
+</ul>
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+</nav>
+  </header>
+<!-- Slide Show -->
+<section>
+<img class="mySlides" src="images/image1.jpg"
+style="width: 100%" height="350px" >
+<img class="mySlides" src="images/image9.jpg"
+style="width:100%" height="350px">
+<img class="mySlides" src="images/image3.jpg"
+style="width:100%" height="350px">
+</section>
+<section align="center">
+<iframe width="80%" height="20%" src="https://www.youtube.com/embed/NCp93xbSwWM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+<!-- Band Description-->
+<section id="facilities">
+  <div class="container"> 
+      <div class="row">
+     <div class="col-md-4">
+   <div class="card text-center">
+     <div class="card-body">
+       <p>Modern farming and agiculture operations work far differently than those
+        few decades ago. primarly because of advancement in technology,including sensors,
+        devices,machines, and information technology ,GPS locators,as computer monitoring 
+        systems,and self steerprograms allow the most advanced tractors and implements to
+        be more precise and less wasteful in the use of fuel,fertilizer or seed.These advanced
+        devices and precision agriculture and robotics systems allow business to be more profitable,
+        efficient,safer and more environmentally friendly.</p>
+     </div>
+   </div>
+     </div>
+     <div class="col-md-4">
+         <div class="card text-center">
+           <div class="card-body">
+          <p> <b>Organic farming </b> is a technique, which  involves in cultivation of plants 
+            in natural ways.This process involves the use ofavoiding synthetic substances to maintain 
+            soil fertility and ecological balance therby minimizing pollution and wastage.It relies on
+            ecological balanced agricultural principles like <i>crop rotation,green manure,biological 
+            pest control,mineral</i>Organic farmers Before planting they soak seedsin fungicides and pests
+            to keep insects and pests at bay.In our websites we selling the productsto buyers which are done
+            through organic farming only.</p> 
+           </div>
+         </div>
+     </div>
+     <div class="col-md-4">
+         <div class="card text-center">
+           <div class="card-body">
+            <p>E-commerce is beginning to have major impact in agriculture sector.The way people go 
+              about purchasing agricultural products is of great concern.most of the customers have
+              to travel far distances to get vegetables & getting quality is not ensured. <b>Our website</b> 
+              will helps farmers & buyers for buying & selling agriculture products,through direct farmer to 
+              end user communications.our project main aim is to the farmers benefit of getting their products,
+             sale at best price at online.Byincreasing no.of electronicstrading everyone will learn 
+             computer technology.</p>
+           </div>
+         </div>
+  </div>
+ </section>
+<!-- Band Members -->
+<section class="w3-row-padding w3-center w3-light-grey">
+  <article class="w3-third">
+    <h1>Fruits</h1>
+    <a href="fruits.html"><img src="images/fruits/guava.jpg.jpg" alt="Random Name" style="width:100%" height="350px"></a>
+  </article>
+  <article class="w3-third">
+    <h1>vegetables</h1>
+    <a href="Vegetables.html"><img src="images/veg/brinjal.jpg.jpg" alt="Random Name" style="width:100%" height="350px"></a>
+  </article>
+  <article class="w3-third">
+    <h1>Green leaf Vegetables</h1>
+    <a href="green leaf.html"><img src="images/Green leaf/coriander.jpg.jpg"alt="Random Name" style="width:100%" height="350px"></a>
+  </article>
+</section>
+ <!--Section: Contact v.2-->
+<section class="mb-4">
+
+    <!--Section heading-->
+    <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+<!--Section description-->
+<p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+        a matter of hours to help you.</p>
+
+    <div class="row">
+
+        <!--Grid column-->
+        <div class="col-md-9 mb-md-0 mb-5">
+            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="name" name="name" class="form-control">
+                            <label for="name" class="">Your name</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="email" name="email" class="form-control">
+                            <label for="email" class="">Your email</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <input type="text" id="subject" name="subject" class="form-control">
+                            <label for="subject" class="">Subject</label>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-12">
+
+                        <div class="md-form">
+                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                            <label for="message">Your message</label>
+                        </div>
+
+                    </div>
+                </div>
+                <!--Grid row-->
+
+            </form>
+
+            <div class="text-center text-md-left">
+                <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+            </div>
+            <div class="status"></div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-3 text-center">
+            <ul class="list-unstyled mb-0">
+                <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                    <p>San Francisco, CA 94126, USA</p>
+                </li>
+
+                <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                    <p>+ 01 234 567 89</p>
+                </li>
+
+                <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                    <p>contact@mdbootstrap.com</p>
+                </li>
+            </ul>
+        </div>
+        <!--Grid column-->
+
+    </div>
+
+</section>
+<!--Section: Contact v.2-->
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+<a href="#"><i class="fa fa-facebook-official"></i></a>
+<a href="#"><i class="fa fa-pinterest-p"></i></a>
+<a href="#"><i class="fa fa-twitter"></i></a>
+<a href="#"><i class="fa fa-flickr"></i></a>
+<a href="#"><i class="fa fa-linkedin"></i></a>
+<p class="w3-medium">
+Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">Agri Info Tech</a>
+</p>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+var i;
+var x = document.getElementsByClassName("mySlides");
+for (i = 0; i < x.length; i++) {
+x[i].style.display = "none";
+}
+myIndex++;
+if (myIndex > x.length) {myIndex = 1}
+x[myIndex-1].style.display = "block";
+setTimeout(carousel, 1000);
+}
+
+    const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+const navLink = document.querySelectorAll(".nav-link");
+
+hamburger.addEventListener("click", mobileMenu);
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}
+</script>
+
+</body>
+</html>
